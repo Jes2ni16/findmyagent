@@ -1,95 +1,348 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState, useEffect, useRef, MutableRefObject, ChangeEvent } from "react";
 import styles from "./page.module.css";
+import "./slide.css";
+import { Modal, Box, Typography, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import Input from '@mui/joy/Input';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+import { FaRegHandPointRight } from "react-icons/fa";
+
+
+// Install Swiper modules
+
+import { FreeMode, Navigation, Thumbs, Autoplay  } from 'swiper/modules';
+
+interface Item {
+  id: number;
+  name: string;
+}
+
+interface Image {
+  src: string;
+  alt: string;
+  inv: string;
+  name: string;
+}
+
+const images: Image[] = [
+  { src: "/malvincard.png", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
+  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/malvincard.png", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/malvincard.png", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+];
+
+
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [query, setQuery] = useState<string>('');
+  const [filteredItems, setFilteredItems] = useState<Image[]>(images); 
+  const [shuffledImages, setShuffledImages] = useState<Image[]>([]);
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+
+  function shuffleArray(array: any[]) {
+    return array
+      .map((item) => ({ ...item, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ sort, ...item }) => item);
+  }
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    const searchQuery = event.target.value; // Get the current input value
+    setQuery(searchQuery); // Update the query state with the search input
+
+    const searchResults = images.filter((image) =>
+      image.name.toLowerCase().includes(searchQuery.toLowerCase()) // Filter images by alt text
+    );
+    
+    setFilteredItems(searchResults); // Update the filtered items with the search results
+  };
+  const openModal = (image: Image) => {
+    
+    setQuery(''); // Clear the search input
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+
+
+
+ 
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      console.log('Click detected:', event.target); // Debugging line to check clicks
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
+
+  // Shuffle images when the component mounts
+  useEffect(() => {
+    setShuffledImages(shuffleArray(images));
+  }, []);
+
+
+  return (
+    <>
+   
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <div className={styles.desktop}>
+          <div className={styles.logo}>
+            <img src="/fma-logo.webp" alt="Fma Logo Logo" />
+          </div>
+          <nav className="navigation">
+            <div className={styles.links}>
+              <a href="/">Home</a>
+              <a href="/">Services</a>
+              <a href="/">About Us</a>
+              <a href="/">Contact Us</a>
+            </div>
+          </nav>
+        </div>
+
+        <div className={styles.mobile}>
+          <div className={styles.logo}>
+            <img src="/fma-logo.webp" alt="Fma Logo Logo" />
+          </div>
+          <div className="hamburger" onClick={toggleNav}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              style={{ width: '80px', height: '50px', fontWeight: 'bolder' }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </div>
+
+<div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}    ref={sidebarRef}> 
+<button onClick={toggleNav} className={styles.closeSidebar}>&times;</button>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/contact">Contact</a>
+        </nav>
+</div>
+
+      </header>
+
+      <main>
+        <div className={styles.firstFold}>
+          <div className="slider-container">
+
+            <div className="searchArea">
+<Input
+      placeholder="Search Your Agent..."
+      sx={{ '--Input-focused': 1, width: 256 }}
+      color="success"
+      onChange={handleSearch} 
+       className="searchBar"
+    />
+            </div>
+
+                
+            {query && (
+        <div className="searchResults"> 
+          {filteredItems.length > 0 ? (
+            filteredItems.map((image, index) => (
+              <li key={index} onClick={() => openModal(image)}>
+                <img src={image.src} alt={image.alt} width="100" style={{ cursor: 'pointer' }} />
+             
+                  <p>{image.name}</p>
+                 
+                
+              </li>
+            ))
+          ) : (
+            <Typography>No images found</Typography> // Display message when no images match the query
+          )}
+        </div>
+      )}
+
+            <Swiper
+        style={{
+ 
+        }}
+        loop={true}
+        // spaceBetween={10}
+        navigation={true}
+        autoplay={{
+          delay: 2500,
+        }}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+        className="mySwiper2"
+      >
+      {shuffledImages.map((image, index) => (
+        <SwiperSlide key={index}>
+          <div className="invLink">
+          <FaRegHandPointRight className="link-icon" />
+          <a href={image.inv}>Visit my Inventory</a>
+          </div>
+        
+          <img src={image.src} alt={image.alt} />
+        </SwiperSlide>
+      ))}
+      </Swiper>
+      <Swiper
+         onSwiper={setThumbsSwiper}
+         loop={true}
+         spaceBetween={10}
+
+         slidesPerView={3}
+         freeMode={true}
+         watchSlidesProgress={true}
+         modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper"
+      >
+      {shuffledImages.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img src={image.src} alt={image.alt} />
+        </SwiperSlide>
+      ))}
+      </Swiper>
+          </div>
+
+
+          <Modal
+        open={Boolean(selectedImage)}
+        onClose={closeModal}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            maxWidth: 800,
+            backgroundColor: 'white',
+            borderRadius: 2,
+            boxShadow: 24,
+            padding:'30px 0 20px 0',
+            // p:2,
+            textAlign: 'center',
+            width:'95%',
+          }}
+        >
+          {selectedImage && (
+            <>
+              <IconButton
+                onClick={closeModal}
+                sx={{ position: 'absolute', top: -8, right: 3, fontSize:'300px' }}
+              >
+                <CloseIcon sx={{ fontSize: '25px' }} />
+              </IconButton>
+              <img src={selectedImage.src} alt={selectedImage.alt} style={{ width: '100%' }} />
+              <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
+                {selectedImage.name}
+              </Typography>
+              <a href={selectedImage.inv} style={{color: '#1F7A1F', marginTop:'200px'}} rel="noopener noreferrer">
+                My Listing
+              </a>
+            </>
+          )}
+        </Box>
+      </Modal>
+
+
+        </div>
+
+        <div className={styles.secondFold}>
+          <div className={styles.serviceText}>
+            <h1>About Us</h1>
+            <p>
+              We feature the top real estate agents who excel in innovative marketing,
+              showcasing properties with cutting-edge strategies. These agents are known
+              for their trustworthiness, providing clients with honest, reliable guidance
+              throughout the selling process. They stand out for exceptional client service
+              and a deep understanding of the market, ensuring successful outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.thirdFold}>
+          
+          <div className={styles.thirdFoldDiv}>
+          <h2>Get In Touch</h2>
+          <div className={styles.thirdFoldText}>
+
+            <div className={styles.iconDiv}>
+          <MailOutlineIcon/>
+              <p>
+                transaction@zaiko.store
+              </p>
+            </div>
+
+            <div className={styles.iconDiv}> 
+          <SmartphoneIcon/>
+              <p>
+                +63 999 6710 543
+              </p>
+            </div>
+
+            <div className={styles.iconDiv}>
+          <FacebookIcon/>
+             <a href="https://www.facebook.com/profile.php?id=61568556057405">Visit our FacebookPage</a>
+            </div>
+
+            <div className={styles.iconDiv}>
+          <InstagramIcon/>
+             <a href="https://www.facebook.com/profile.php?id=61568556057405">Visit us on  Instagram</a>
+            </div>
+
+          </div>
+
+
+          </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
+    </>
   );
 }
