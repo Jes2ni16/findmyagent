@@ -44,6 +44,9 @@ const images: Image[] = [
   { src: "/malvincard.png", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
   { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
   { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
 ];
 
 
