@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, MutableRefObject, ChangeEvent } from "react";
+import React, { useState, useEffect, useRef, ChangeEvent } from "react";
 import styles from "./page.module.css";
 import "./slide.css";
 import { Modal, Box, Typography, IconButton } from '@mui/material';
@@ -18,16 +18,13 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 import { FaRegHandPointRight } from "react-icons/fa";
-
+import Link from "next/link";
 
 // Install Swiper modules
 
 import { FreeMode, Navigation, Thumbs, Autoplay  } from 'swiper/modules';
 
-interface Item {
-  id: number;
-  name: string;
-}
+
 
 interface Image {
   src: string;
@@ -131,10 +128,18 @@ export default function Home() {
           </div>
           <nav className="navigation">
             <div className={styles.links}>
-              <a href="/">Home</a>
-              <a href="/">Services</a>
-              <a href="/">About Us</a>
-              <a href="/">Contact Us</a>
+        <Link href="/">
+        <a>Home</a>
+      </Link>
+      <Link href="/services">
+        <a>Services</a>
+      </Link>
+      <Link href="/about">
+        <a>About Us</a>
+      </Link>
+      <Link href="/contact">
+        <a>Contact Us</a>
+      </Link>
             </div>
           </nav>
         </div>
