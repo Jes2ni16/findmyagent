@@ -16,6 +16,7 @@ import 'swiper/css/thumbs';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Swiper as SwiperType } from 'swiper'; 
 
 import { FaRegHandPointRight } from "react-icons/fa";
 import Link from "next/link";
@@ -56,14 +57,15 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState< SwiperType | null>(null);
 
-  function shuffleArray(array: any[]) {
+  function shuffleArray(array: Image[]): Image[] {
     return array
-      .map((item) => ({ ...item, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ sort, ...item }) => item);
+      .map((item) => ({ item, sort: Math.random() })) // Map to a temporary object with `sort`
+      .sort((a, b) => a.sort - b.sort) // Sort based on the random value
+      .map(({ item }) => item); // Return only the item, excluding `sort`
   }
+
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const searchQuery = event.target.value; // Get the current input value
@@ -169,10 +171,18 @@ export default function Home() {
 <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}    ref={sidebarRef}> 
 <button onClick={toggleNav} className={styles.closeSidebar}>&times;</button>
         <nav>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
-          <a href="/contact">Contact</a>
+        <Link href="/">
+        <a>Home</a>
+      </Link>
+      <Link href="/services">
+        <a>Services</a>
+      </Link>
+      <Link href="/about">
+        <a>About Us</a>
+      </Link>
+      <Link href="/contact">
+        <a>Contact Us</a>
+      </Link>
         </nav>
 </div>
 
@@ -229,7 +239,9 @@ export default function Home() {
         <SwiperSlide key={index}>
           <div className="invLink">
           <FaRegHandPointRight className="link-icon" />
-          <a href={image.inv}>Visit my Inventory</a>
+          <Link href={image.inv}>
+  Visit my Inventory
+</Link>
           </div>
         
           <img src={image.src} alt={image.alt} />
@@ -290,9 +302,11 @@ export default function Home() {
               <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
                 {selectedImage.name}
               </Typography>
-              <a href={selectedImage.inv} style={{color: '#1F7A1F', marginTop:'200px'}} rel="noopener noreferrer">
-                My Listing
-              </a>
+              <Link href={selectedImage.inv} passHref>
+  <a style={{ color: '#1F7A1F', marginTop: '200px' }} rel="noopener noreferrer">
+    My Listing
+  </a>
+</Link>
             </>
           )}
         </Box>
@@ -335,14 +349,17 @@ export default function Home() {
             </div>
 
             <div className={styles.iconDiv}>
-          <FacebookIcon/>
-             <a href="https://www.facebook.com/profile.php?id=61568556057405">Visit our FacebookPage</a>
-            </div>
+        <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref>
+          <a>Visit our Facebook Page</a>
+        </Link>
+        </div>
 
             <div className={styles.iconDiv}>
-          <InstagramIcon/>
-             <a href="https://www.facebook.com/profile.php?id=61568556057405">Visit us on  Instagram</a>
-            </div>
+        <InstagramIcon />
+        <Link href="https://www.instagram.com/your-profile" passHref>
+          <a>Visit us on Instagram</a>
+        </Link>
+      </div>
 
           </div>
 
