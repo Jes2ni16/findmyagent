@@ -156,7 +156,7 @@ export default function Home() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke="currentColor"
+              stroke="black"
               style={{ width: '80px', height: '50px', fontWeight: 'bolder' }}
             >
               <path
