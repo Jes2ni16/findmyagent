@@ -349,6 +349,7 @@ export default function Home() {
             </div>
 
             <div className={styles.iconDiv}>
+            <FacebookIcon />
         <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref>
           <a>Visit our Facebook Page</a>
         </Link>
