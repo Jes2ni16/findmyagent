@@ -131,16 +131,16 @@ export default function Home() {
           <nav className="navigation">
             <div className={styles.links}>
         <Link href="/">
-        <a>Home</a>
+        Home
       </Link>
       <Link href="/services">
-        <a>Services</a>
+        Services
       </Link>
       <Link href="/about">
-        <a>About Us</a>
+        About Us
       </Link>
       <Link href="/contact">
-        <a>Contact Us</a>
+        Contact Us
       </Link>
             </div>
           </nav>
@@ -172,16 +172,16 @@ export default function Home() {
 <button onClick={toggleNav} className={styles.closeSidebar}>&times;</button>
         <nav>
         <Link href="/">
-        <a>Home</a>
+        Home
       </Link>
       <Link href="/services">
-        <a>Services</a>
+        Services
       </Link>
       <Link href="/about">
-        <a>About Us</a>
+        About Us
       </Link>
       <Link href="/contact">
-        <a>Contact Us</a>
+        Contact Us
       </Link>
         </nav>
 </div>
@@ -302,10 +302,8 @@ export default function Home() {
               <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
                 {selectedImage.name}
               </Typography>
-              <Link href={selectedImage.inv} passHref>
-  <a style={{ color: '#1F7A1F', marginTop: '200px' }} rel="noopener noreferrer">
+              <Link href={selectedImage.inv} passHref style={{ color: '#1F7A1F', marginTop: '200px' }} rel="noopener noreferrer">
     My Listing
-  </a>
 </Link>
             </>
           )}
@@ -316,8 +314,19 @@ export default function Home() {
         </div>
 
         <div className={styles.secondFold}>
-          <div className={styles.serviceText}>
-            <h1>About Us</h1>
+
+            <h1>Who We Are</h1>
+
+            <div className={styles.serviceText}>
+            <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/OzoGeYPQ6Ak" // Replace with your video URL
+        title="YouTube video player"
+        style={{ border: 'none' }} // Use CSS to remove the border
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
             <p>
               We feature the top real estate agents who excel in innovative marketing,
               showcasing properties with cutting-edge strategies. These agents are known
@@ -351,14 +360,14 @@ export default function Home() {
             <div className={styles.iconDiv}>
             <FacebookIcon />
         <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref>
-          <a>Visit our Facebook Page</a>
+          Visit our Facebook Page
         </Link>
         </div>
 
             <div className={styles.iconDiv}>
         <InstagramIcon />
         <Link href="https://www.instagram.com/your-profile" passHref>
-          <a>Visit us on Instagram</a>
+          Visit us on Instagram
         </Link>
       </div>
 
