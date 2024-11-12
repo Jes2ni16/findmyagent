@@ -12,6 +12,9 @@
     filter: brightness(40%);
   }
 
+  .hamburger svg {
+    color: #000;
+  }
 
  
   .slider-container {
