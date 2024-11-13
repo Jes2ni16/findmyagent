@@ -36,15 +36,15 @@ interface Image {
 }
 
 const images: Image[] = [
-  { src: "/MalvinCard.png", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
-  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/MalvinCard.png", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/MalvinCard.png", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
-  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
-  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/MalvinCard.webp", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
+  { src: "/DianneCard.webp", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/MalvinCard.webp", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/DianneCard.webp", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/MalvinCard.webp", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/DianneCard.webp", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/JesuaCard.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/JesuaCard.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/JesuaCard.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
 ];
 
 
