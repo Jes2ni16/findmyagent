@@ -6,6 +6,9 @@
     height: auto;
   }
 
+  .mySwiper2  img{
+padding-bottom: 40px;
+  }
 
 
   .mySwiper img{
@@ -133,6 +136,10 @@ height: auto;
     .mySwiper2 img {
       width: 100%;
   }
+
+  .mySwiper{
+    margin-top: 20px;
+   }
   
     .invLink a{
       font-size: 15px;
