@@ -124,8 +124,12 @@ height: auto;
     position: absolute;
     right: 10%;
     top: -50px;
+  }
+
+  .searchArea .searchBar {
+
     background-color: transparent;
-    color: #423f3f;
+    color: #f0f0f0;
   }
 
   .slick-prev:before, .slick-next:before {
