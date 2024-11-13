@@ -182,6 +182,10 @@ font-size: 34px;
   align-items: center;
   padding: 5px 20px;
 }
+.serviceText p{
+  font-size: 20px;
+
+}
 
 .serviceText {
 display: block;
