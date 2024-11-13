@@ -7,11 +7,12 @@ import { Modal, Box, Typography, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Input from '@mui/joy/Input';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -23,7 +24,7 @@ import Link from "next/link";
 
 // Install Swiper modules
 
-import { FreeMode, Navigation, Thumbs, Autoplay  } from 'swiper/modules';
+import { FreeMode, Thumbs, Autoplay, Pagination  } from 'swiper/modules';
 
 
 
@@ -35,16 +36,15 @@ interface Image {
 }
 
 const images: Image[] = [
-  { src: "/malvincard.png", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
-  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/malvincard.png", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/malvincard.png", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/diane.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
-  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
-  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
-  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
-  { src: "/jesua.webp", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/MalvinCard.png", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
+  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/MalvinCard.png", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/MalvinCard.png", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
+  { src: "/DianneCard.png", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
+  { src: "/JesuaCard.png", alt: "Jesua", inv: "/sample.html", name: "Jesua Gordon" },
 ];
 
 
@@ -126,20 +126,18 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.desktop}>
           <div className={styles.logo}>
-            <img src="/fma-logo.webp" alt="Fma Logo Logo" />
+            <Image  src="/fma-logo.webp"  width={500} 
+height={300}   alt="Fma Logo Logo" />
           </div>
           <nav className="navigation">
             <div className={styles.links}>
         <Link href="/">
         Home
       </Link>
-      <Link href="/services">
-        Services
-      </Link>
-      <Link href="/about">
+      <Link href="/#secondFold">
         About Us
       </Link>
-      <Link href="/contact">
+      <Link href="/#thirdFold">
         Contact Us
       </Link>
             </div>
@@ -148,7 +146,8 @@ export default function Home() {
 
         <div className={styles.mobile}>
           <div className={styles.logo}>
-            <img src="/fma-logo.webp" alt="Fma Logo Logo" />
+          <Image  src="/fma-logo.webp"  width={500} 
+height={300}   alt="Fma Logo Logo" />
           </div>
           <div className="hamburger" onClick={toggleNav}>
             <svg
@@ -171,16 +170,13 @@ export default function Home() {
 <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}    ref={sidebarRef}> 
 <button onClick={toggleNav} className={styles.closeSidebar}>&times;</button>
         <nav>
-        <Link href="/">
+        <Link href="/" onClick={toggleNav}>
         Home
       </Link>
-      <Link href="/services">
-        Services
-      </Link>
-      <Link href="/about">
+      <Link href="/#secondFold" onClick={toggleNav}>
         About Us
       </Link>
-      <Link href="/contact">
+      <Link href="/#thirdFold" onClick={toggleNav}>
         Contact Us
       </Link>
         </nav>
@@ -208,7 +204,7 @@ export default function Home() {
           {filteredItems.length > 0 ? (
             filteredItems.map((image, index) => (
               <li key={index} onClick={() => openModal(image)}>
-                <img src={image.src} alt={image.alt} width="100" style={{ cursor: 'pointer' }} />
+                <Image src={image.src} alt={image.alt} width={200} height={100} style={{ cursor: 'pointer' }} />
              
                   <p>{image.name}</p>
                  
@@ -227,12 +223,12 @@ export default function Home() {
         }}
         loop={true}
         // spaceBetween={10}
-        navigation={true}
+        pagination={{ clickable: true }} 
         autoplay={{
           delay: 2500,
         }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+        modules={[FreeMode,  Thumbs, Autoplay, Pagination ]}
         className="mySwiper2"
       >
       {shuffledImages.map((image, index) => (
@@ -244,7 +240,7 @@ export default function Home() {
 </Link>
           </div>
         
-          <img src={image.src} alt={image.alt} />
+          <Image src={image.src} width={600} height={450} alt={image.alt}  quality={100} />
         </SwiperSlide>
       ))}
       </Swiper>
@@ -252,16 +248,16 @@ export default function Home() {
          onSwiper={setThumbsSwiper}
          loop={true}
          spaceBetween={10}
-
+  
          slidesPerView={3}
          freeMode={true}
          watchSlidesProgress={true}
-         modules={[FreeMode, Navigation, Thumbs]}
+         modules={[FreeMode, Pagination, Thumbs]}
         className="mySwiper"
       >
       {shuffledImages.map((image, index) => (
         <SwiperSlide key={index}>
-          <img src={image.src} alt={image.alt} />
+          <Image src={image.src} width={350} height={200} alt={image.alt} />
         </SwiperSlide>
       ))}
       </Swiper>
@@ -298,7 +294,7 @@ export default function Home() {
               >
                 <CloseIcon sx={{ fontSize: '25px' }} />
               </IconButton>
-              <img src={selectedImage.src} alt={selectedImage.alt} style={{ width: '100%' }} />
+              <Image src={selectedImage.src}  alt={selectedImage.alt} style={{ width: '100%' }} />
               <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
                 {selectedImage.name}
               </Typography>
@@ -313,7 +309,7 @@ export default function Home() {
 
         </div>
 
-        <div className={styles.secondFold}>
+        <div className={styles.secondFold} id="secondFold">
 
             <h1>Who We Are</h1>
 
@@ -337,7 +333,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.thirdFold}>
+        <div className={styles.thirdFold} id="thirdFold">
           
           <div className={styles.thirdFoldDiv}>
           <h2>Get In Touch</h2>

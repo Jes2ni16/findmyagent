@@ -28,7 +28,9 @@
 }
 
 .logo img{
-  max-width: 250px;
+  max-width: 170px;
+  height: auto;
+  margin-left: 50px;
 }
 
 .links a {
@@ -193,6 +195,7 @@ display: block;
 
 .logo img{
   max-width: 150px;
+  margin-left: 10px;
 }
 
 .secondFold  h1{

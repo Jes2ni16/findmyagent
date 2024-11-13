@@ -1,7 +1,9 @@
 .mySwiper2  img{
-    width: 80%;
+    width: 70%;
+    max-width: 1200px;
     margin: auto;
     display: flex;
+    height: auto;
   }
 
 
@@ -10,13 +12,18 @@
     max-width: 350px;
     margin: auto;
     filter: brightness(40%);
+    height: auto;
   }
 
   .hamburger svg {
     color: #000;
   }
 
- 
+
+  .swiper-pagination-bullet {
+    background-color:  #1F7A1F !important; /* Replace with your desired color */
+  }
+
   .slider-container {
     max-width: 1800px;
     margin: auto;
@@ -26,6 +33,7 @@
   .mySwiper .swiper-slide-thumb-active img {
     filter: brightness(100%);
     z-index: 5;
+    height: auto;
   }
 
   .swiper-slide {
@@ -103,6 +111,7 @@ font-size: 20px;
 
   .searchResults li img {
 width: 30%;
+height: auto;
       }
     
 
