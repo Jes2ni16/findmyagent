@@ -37,11 +37,11 @@ interface Image {
 
 const images: Image[] = [
   { src: "/Malbin.svg", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
   { src: "/Malbin.svg", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
   { src: "/Malbin.svg", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Rosaroso" },
+  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
   { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
   { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
   { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
