@@ -36,15 +36,15 @@ interface Image {
 }
 
 const images: Image[] = [
-  { src: "/Malbin.svg", alt: "Malvin Card1", inv: "/sample.html", name: "Malvin Sabillo"},
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
-  { src: "/Malbin.svg", alt: "Malvin Card2", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
-  { src: "/Malbin.svg", alt: "Malvin Card3", inv: "/sample.html", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "/sample.html", name: "Dianne Alvarez" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "/sample.html", name: "Jesua Garlet" },
+  { src: "/Malbin.svg", alt: "Malvin Card1", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo"},
+  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Malbin.svg", alt: "Malvin Card2", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
+  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Malbin.svg", alt: "Malvin Card3", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
+  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
+  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
+  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
 ];
 
 
@@ -126,7 +126,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.desktop}>
           <div className={styles.logo}>
-            <Image  src="/fma-logo.webp"  width={500} 
+            <Image  src="/fma-logo.png"  width={500} 
 height={300}   alt="Fma Logo Logo" />
           </div>
           <nav className="navigation">
@@ -146,7 +146,7 @@ height={300}   alt="Fma Logo Logo" />
 
         <div className={styles.mobile}>
           <div className={styles.logo}>
-          <Image  src="/fma-logo.webp"  width={500} 
+          <Image  src="/fma-logo.png"  width={500} 
 height={300}   alt="Fma Logo Logo" />
           </div>
           <div className="hamburger" onClick={toggleNav}>

@@ -28,7 +28,7 @@
 }
 
 .logo img{
-  max-width: 170px;
+  max-width: 50px;
   height: auto;
   margin-left: 50px;
 }
@@ -184,6 +184,7 @@ font-size: 34px;
 }
 .serviceText p{
   font-size: 20px;
+  padding-left: 10px;
 
 }
 
@@ -198,7 +199,7 @@ display: block;
   }
 
 .logo img{
-  max-width: 150px;
+  max-width: 50px;
   margin-left: 10px;
 }
 
