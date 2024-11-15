@@ -298,7 +298,7 @@ height={300}   alt="Fma Logo Logo" />
               <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
                 {selectedImage.name}
               </Typography>
-              <Link href={selectedImage.inv} passHref style={{ color: '#1F7A1F', marginTop: '200px' }} rel="noopener noreferrer">
+              <Link href={selectedImage.inv} passHref style={{ color: '#1F7A1F', marginTop: '100px' , backgroundColor : '#121418af', padding : '5px 15px', borderRadius:'5px', boxShadow : '10px 10px 15px 5px rgba(0, 0, 0, 0.3);' }} rel="noopener noreferrer">
     My Listing
 </Link>
             </>
@@ -311,7 +311,7 @@ height={300}   alt="Fma Logo Logo" />
 
         <div className={styles.secondFold} id="secondFold">
 
-            <h1>Who We Are</h1>
+            <h1>Discover your ideal agent effortlessly</h1>
 
             <div className={styles.serviceText}>
             <iframe
