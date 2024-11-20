@@ -24,7 +24,6 @@
     top: 0;
     right: 0;
     width: 100%;
-
 }
 
 .logo img{
@@ -205,6 +204,9 @@ display: block;
 
 .secondFold  h1{
 font-size: 28px;
+}
+.secondFold {
+  padding: 20px 20px;
 }
 
 .header .desktop {

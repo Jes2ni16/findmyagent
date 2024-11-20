@@ -25,7 +25,8 @@ import Link from "next/link";
 // Install Swiper modules
 
 import { FreeMode, Thumbs, Autoplay, Pagination  } from 'swiper/modules';
-
+import TestimonialCard from './components/testimonial';
+import testimonials from './data/testmonialData';
 
 
 interface Image {
@@ -332,6 +333,23 @@ height={300}   alt="Fma Logo Logo" />
             </p>
           </div>
         </div>
+
+
+        <div className={styles.testimonialContainer} id="testimonialContainer">
+         <h2>
+         Our Results, Their Words
+         </h2>
+         <div className="testimonial-wrapper">
+      {testimonials.map((testimonial, index) => (
+        <TestimonialCard
+          key={index}
+          quote={testimonial.quote}
+          name={testimonial.name}
+          title={testimonial.title}
+          rating={testimonial.rating}
+        />
+      ))}</div>
+    </div>
 
         <div className={styles.thirdFold} id="thirdFold">
           
