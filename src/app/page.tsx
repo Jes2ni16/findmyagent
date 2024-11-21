@@ -345,7 +345,6 @@ height={300}   alt="Fma Logo Logo" />
           key={index}
           quote={testimonial.quote}
           name={testimonial.name}
-          title={testimonial.title}
           rating={testimonial.rating}
         />
       ))}</div>

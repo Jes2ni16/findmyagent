@@ -4,11 +4,10 @@ import  './testimonial.css'
 interface TestimonialCardProps {
   quote: string;
   name: string;
-  title: string;
   rating: number;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, title, rating }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name,  rating }) => {
   return (
     <div className="testimonial-card">
       <div className='testimonial-heading'>
