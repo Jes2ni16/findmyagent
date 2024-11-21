@@ -356,12 +356,16 @@ height={300}   alt="Fma Logo Logo" />
           <h2>Get In Touch</h2>
           <div className={styles.thirdFoldText}>
 
-            <div className={styles.iconDiv}>
+         
+ 
+
+          <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=findmyagent@zaiko.store" passHref className={styles.iconDiv}>
           <MailOutlineIcon/>
               <p>
                 transaction@zaiko.store
               </p>
-            </div>
+              </Link>
+   
 
             <div className={styles.iconDiv}> 
           <SmartphoneIcon/>
@@ -370,19 +374,21 @@ height={300}   alt="Fma Logo Logo" />
               </p>
             </div>
 
-            <div className={styles.iconDiv}>
-            <FacebookIcon />
-        <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref>
+            
+          
+        <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref className={styles.iconDiv}>
+        <FacebookIcon />
           Visit our Facebook Page
         </Link>
-        </div>
+       
 
-            <div className={styles.iconDiv}>
+
+   
+        <Link href="https://www.instagram.com/your-profile" passHref className={styles.iconDiv}>
         <InstagramIcon />
-        <Link href="https://www.instagram.com/your-profile" passHref>
           Visit us on Instagram
         </Link>
-      </div>
+
 
           </div>
 
