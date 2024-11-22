@@ -15,7 +15,7 @@ const SearchBar: FC<SearchBarProps> = ({ onSearch }) => {
 
     <Input
   placeholder="Search Your Agent Here..."
-  sx={{ '--Input-focused': 1, width: 256 }}
+  sx={{ '--Input-focused': 1, width: 256 ,color:'#000'}}
   color="success"
   className="searchBar"
   onChange={handleInputChange}

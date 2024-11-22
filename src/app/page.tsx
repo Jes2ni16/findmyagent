@@ -7,6 +7,7 @@ import { Modal, Box, Typography, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Input from '@mui/joy/Input';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import VerifiedIcon from '@mui/icons-material/Verified';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,15 +38,15 @@ interface Image {
 }
 
 const images: Image[] = [
-  { src: "/Malbin.svg", alt: "Malvin Card1", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo"},
-  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
-  { src: "/Malbin.svg", alt: "Malvin Card2", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
-  { src: "/Malbin.svg", alt: "Malvin Card3", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
-  { src: "/Dianne.svg", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
-  { src: "/Jesua.svg", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
+  { src: "/Malbin.webp", alt: "Malvin Card1", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo"},
+  { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Malbin.webp", alt: "Malvin Card2", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
+  { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Malbin.webp", alt: "Malvin Card3", inv: "https://app.powerbi.com/view?r=eyJrIjoiYWQzMjk5YzAtOTY5NC00MmU5LWEyNmItMjM0MmViN2FjYjhkIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Malvin Sabillo" },
+  { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
+  { src: "/Jesua.webp", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
+  { src: "/Jesua.webp", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
+  { src: "/Jesua.webp", alt: "Jesua", inv: "https://app.powerbi.com/view?r=eyJrIjoiOWU2YWZhOTMtMzEzOC00NTBiLWE3MmQtOTJjZDcxYTMzOTUyIiwidCI6IjdmYjM3MjlhLTYxY2EtNDJhZS1hZmE1LWU3YjVjZjUyNWFlNiIsImMiOjEwfQ%3D%3D", name: "Jesua Garlet" },
 ];
 
 
@@ -218,19 +219,15 @@ height={300}   alt="Fma Logo Logo" />
         </div>
       )}
 
-            <Swiper
-        style={{
- 
+<Swiper
+        slidesPerView={'auto'}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
         }}
-        loop={true}
-        // spaceBetween={10}
-        pagination={{ clickable: true }} 
-        autoplay={{
-          delay: 2500,
-        }}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode,  Thumbs, Autoplay, Pagination ]}
-        className="mySwiper2"
+        
+        modules={[Pagination]}
+        className="mySwiper"
       >
       {shuffledImages.map((image, index) => (
         <SwiperSlide key={index}>
@@ -245,23 +242,15 @@ height={300}   alt="Fma Logo Logo" />
         </SwiperSlide>
       ))}
       </Swiper>
-      <Swiper
-         onSwiper={setThumbsSwiper}
-         loop={true}
-         spaceBetween={10}
-  
-         slidesPerView={3}
-         freeMode={true}
-         watchSlidesProgress={true}
-         modules={[FreeMode, Pagination, Thumbs]}
-        className="mySwiper"
+      <Typography
+        variant="body1"
+        textAlign="center"
+        color="textSecondary"
+        sx={{ marginTop: 2 }}
       >
-      {shuffledImages.map((image, index) => (
-        <SwiperSlide key={index}>
-          <Image src={image.src} width={350} height={200} alt={image.alt} />
-        </SwiperSlide>
-      ))}
-      </Swiper>
+        All agents are verified <VerifiedIcon sx={{ color: 'blue', fontSize: 16, marginLeft: 1 }} />
+      </Typography>
+
           </div>
 
 
@@ -295,7 +284,7 @@ height={300}   alt="Fma Logo Logo" />
               >
                 <CloseIcon sx={{ fontSize: '25px' }} />
               </IconButton>
-              <Image src={selectedImage.src}  alt={selectedImage.alt} style={{ width: '100%' }} />
+              <Image src={selectedImage.src} width={200} height={350} alt={selectedImage.alt} style={{ width: '100%' }} className="modal-image" />
               <Typography variant="h5" sx={{ mt: 1 ,mb:2}}>
                 {selectedImage.name}
               </Typography>
