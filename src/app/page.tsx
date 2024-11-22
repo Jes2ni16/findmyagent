@@ -222,11 +222,12 @@ height={300}   alt="Fma Logo Logo" />
 <Swiper
         slidesPerView={'auto'}
         spaceBetween={30}
+        loop={true}
         pagination={{
           clickable: true,
         }}
         
-        modules={[Pagination]}
+  
         className="mySwiper"
       >
       {shuffledImages.map((image, index) => (
