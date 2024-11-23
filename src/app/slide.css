@@ -101,6 +101,8 @@ width: auto;
   .modal-image {
     width: 100%;
     height: auto;
+    max-width: 500px;
+    border-radius: 20px;
   }
 
   .searchResults li  {

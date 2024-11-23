@@ -222,12 +222,15 @@ height={300}   alt="Fma Logo Logo" />
 <Swiper
         slidesPerView={'auto'}
         spaceBetween={30}
+        modules={[Autoplay]}// Add the Autoplay module
+        autoplay={{
+          delay: 2000,  // 2.5 seconds delay
+          disableOnInteraction: false,  // Keep autoplay after interaction
+        }}
         loop={true}
         pagination={{
           clickable: true,
         }}
-        
-  
         className="mySwiper"
       >
       {shuffledImages.map((image, index) => (
