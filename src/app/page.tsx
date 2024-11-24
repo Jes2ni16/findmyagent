@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useRef, ChangeEvent } from "react";
 import styles from "./page.module.css";
 import "./slide.css";
-import { Modal, Box, Typography, IconButton } from '@mui/material';
+import { Modal, Box, Typography, IconButton , SvgIcon} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Input from '@mui/joy/Input';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import MailIcon from '@mui/icons-material/Mail';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Image from 'next/image';
 
@@ -353,7 +353,7 @@ height={300}   alt="Fma Logo Logo" />
  
 
           <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=findmyagent@zaiko.store" passHref className={styles.iconDiv}>
-          <MailOutlineIcon/>
+          <Image src="/gmailIcon.png" alt="gmail-icon" width={70} height={60}  />
               <p>
                 transaction@zaiko.store
               </p>
@@ -361,7 +361,7 @@ height={300}   alt="Fma Logo Logo" />
    
 
             <div className={styles.iconDiv}> 
-          <SmartphoneIcon/>
+            <Image src="/phoneIcon.png" alt="phone-icon" width={70} height={60}  />
               <p>
                 +63 999 6710 543
               </p>
@@ -370,16 +370,22 @@ height={300}   alt="Fma Logo Logo" />
             
           
         <Link href="https://www.facebook.com/profile.php?id=61568556057405" passHref className={styles.iconDiv}>
-        <FacebookIcon />
-          Visit our Facebook Page
+        <Image src="/facebookIcon.png" alt="facebook-icon" width={70} height={60}  />
+        <p>
+        Visit our Facebook Page
+        </p>
+  
         </Link>
        
 
 
    
         <Link href="https://www.instagram.com/your-profile" passHref className={styles.iconDiv}>
-        <InstagramIcon />
-          Visit us on Instagram
+        <Image src="/instagramIcon.png" alt="instagram-icon" width={70} height={60}  />
+        <p>
+        Visit us on Instagram
+        </p>
+     
         </Link>
 
 
