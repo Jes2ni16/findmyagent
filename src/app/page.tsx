@@ -6,18 +6,14 @@ import "./slide.css";
 import { Modal, Box, Typography, IconButton , SvgIcon} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Input from '@mui/joy/Input';
-import MailIcon from '@mui/icons-material/Mail';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Image from 'next/image';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+
 import { Swiper as SwiperType } from 'swiper'; 
 
 import { FaRegHandPointRight } from "react-icons/fa";
