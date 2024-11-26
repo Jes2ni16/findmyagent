@@ -185,7 +185,7 @@ height={300}   alt="Fma Logo Logo" />
       <main>
         <div className={styles.firstFold}>
           <div className="slider-container">
-
+{/* 
             <div className="searchArea">
 <Input
       placeholder="Search Your Agent..."
@@ -194,7 +194,9 @@ height={300}   alt="Fma Logo Logo" />
       onChange={handleSearch} 
        className="searchBar"
     />
-            </div>
+            </div> */}
+
+<h1>Discover your trusted agent effortlessly</h1>
 
                 
             {query && (
@@ -301,7 +303,7 @@ height={300}   alt="Fma Logo Logo" />
 
         <div className={styles.secondFold} id="secondFold">
 
-            <h1>Discover your ideal agent effortlessly</h1>
+<h2>What we Do</h2>
 
             <div className={styles.serviceText}>
             <iframe
@@ -376,8 +378,8 @@ height={300}   alt="Fma Logo Logo" />
 
 
    
-        <Link href="https://www.instagram.com/your-profile" passHref className={styles.iconDiv}>
-        <Image src="/instagramIcon.png" alt="instagram-icon" width={70} height={60}  />
+        <Link href="https://www.instagram.com/findmyagent_?igsh=MXd5OWgzb3dmaGE3MQ%3D%3D" passHref className={styles.iconDiv}>
+        <Image src="/InstagramIcon.png" alt="instagram-icon" width={70} height={60}  />
         <p>
         Visit us on Instagram
         </p>
