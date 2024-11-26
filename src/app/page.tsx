@@ -350,7 +350,7 @@ height={300}   alt="Fma Logo Logo" />
          
  
 
-          <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=findmyagent@zaiko.store" passHref className={styles.iconDiv}>
+          <Link href="mailto:findmyagent@zaiko.store" passHref className={styles.iconDiv}>
           <Image src="/gmailIcon.png" alt="gmail-icon" width={70} height={60}  />
               <p>
                 transaction@zaiko.store
