@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import "./slide.css";
 import { Modal, Box, Typography, IconButton , SvgIcon} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import Input from '@mui/joy/Input';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -184,6 +184,8 @@ height={300}   alt="Fma Logo Logo" />
 
       <main>
         <div className={styles.firstFold}>
+
+        <h1>DISCOVER YOUR TRUSTED AGENT EFFORTLESSLY</h1>
           <div className="slider-container">
 {/* 
             <div className="searchArea">
@@ -196,7 +198,7 @@ height={300}   alt="Fma Logo Logo" />
     />
             </div> */}
 
-<h1>Discover your trusted agent effortlessly</h1>
+
 
                 
             {query && (
@@ -248,12 +250,13 @@ height={300}   alt="Fma Logo Logo" />
         variant="body1"
         textAlign="center"
         color="textSecondary"
-        sx={{ marginTop: 2 }}
+        sx={{ marginTop: 3, color:'#fff' }}
       >
-        All agents are verified <VerifiedIcon sx={{ color: 'blue', fontSize: 16, marginLeft: 1 }} />
+        All agents are verified <VerifiedIcon sx={{ color: '#2f45ff', fontSize: 16, marginLeft: 1 }} />
       </Typography>
 
           </div>
+
 
 
           <Modal
@@ -298,12 +301,19 @@ height={300}   alt="Fma Logo Logo" />
         </Box>
       </Modal>
 
+      </div>
 
-        </div>
+      <div className={styles.arrowDown}>
+      <KeyboardArrowDownIcon style={{ fontSize: 80, color:'#fff' }} />
+    </div>
+
+
 
         <div className={styles.secondFold} id="secondFold">
 
-<h2>What we Do</h2>
+<h2>ELAVATING REAL ESTATE AGENTS TO SUCCESS</h2>
+
+{/* <hr /> */}
 
             <div className={styles.serviceText}>
             <iframe
