@@ -301,11 +301,13 @@ height={300}   alt="Fma Logo Logo" />
         </Box>
       </Modal>
 
-      </div>
-
+      
       <div className={styles.arrowDown}>
       <KeyboardArrowDownIcon style={{ fontSize: 80, color:'#fff' }} />
     </div>
+
+
+      </div>
 
 
 

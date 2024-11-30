@@ -105,7 +105,7 @@ font-family: 'Playfair Display', serif;
  max-width: 1700px;
  margin: auto;
 margin-top: 30px;
-margin-bottom: 40px;
+padding-bottom: 20px;
 display: flex;
 }
 
@@ -223,6 +223,7 @@ font-size: 34px;
 .serviceText p{
   font-size: 20px;
   padding: 0 20px;
+  padding-bottom: 20px;
 
 }
 
