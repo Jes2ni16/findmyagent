@@ -41,7 +41,7 @@ color: #000;
 
 
 .firstFold {
-  height: 100vh;
+  height: 95vh;
   background-color: #fff;
   background-image: url('/background5.jpg');
   background-size: cover;
@@ -74,7 +74,7 @@ color: #000;
 .secondFold h2{
   text-align: center;
   background-color: #252525;
-    padding: 15px;
+    padding: 25px 0;
     color: #fff;
     font-weight: 300;
 }
@@ -221,10 +221,14 @@ font-size: 34px;
   padding: 5px 20px;
 }
 .serviceText p{
-  font-size: 20px;
+  font-size: 18px;
   padding: 0 20px;
   padding-bottom: 20px;
 
+}
+
+.secondFold h2{
+    padding: 15px;
 }
 
 .serviceText {
@@ -271,7 +275,6 @@ margin-top: 30px;
 @media (max-width:767px) {
   .serviceText {
    margin-top: 30px;
-   margin-bottom: 40px;
    }
    .serviceText iframe {
     height: 320px;
