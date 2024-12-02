@@ -59,6 +59,7 @@ color: #000;
   background-color: #fff;
   color: #000;
   height: auto;
+  padding-bottom: 40px;
 }
 
 .arrowDown {
@@ -112,15 +113,24 @@ display: flex;
 
 
 
-.thirdFold h2 {
+.footer h2 {
 text-align: center;
 margin-bottom: 50px;
 font-size: 34px;
 }
 
+.howItWorksContainer {
+  background-color: #252525;
+  color: #fff;
+}
 
+.howItWorksContainer h2 {
+ text-align: center;
+ padding: 20px;
+ background-color: #126140;
+}
 
-.thirdFoldDiv {
+.footerDiv {
   max-width: 1700px;
   width: 90%;
   margin: auto;
@@ -128,7 +138,7 @@ font-size: 34px;
   padding-bottom: 50px;
 }
 
-.thirdFoldText {
+.footerText {
   display: flex;
   justify-content: space-around;
 }
@@ -195,7 +205,7 @@ font-size: 34px;
   cursor: pointer;
 }
 
-.thirdFold {
+.footer{
   margin-top: 30px;
 }
 
@@ -257,7 +267,7 @@ font-size: 24px;
 }
 
 
-.thirdFoldText {
+.footerText {
   display: block
 
 }

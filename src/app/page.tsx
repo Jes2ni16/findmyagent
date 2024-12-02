@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
+import HowItWorks from "./components/HowItWorks";
 
 import { Swiper as SwiperType } from 'swiper'; 
 
@@ -85,9 +86,6 @@ export default function Home() {
     setSelectedImage(null);
   };
 
-
-
-
  
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -109,7 +107,6 @@ export default function Home() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen]);
-
 
   // Shuffle images when the component mounts
   useEffect(() => {
@@ -135,7 +132,7 @@ height={300}   alt="Fma Logo Logo" />
       <Link href="/#secondFold">
         About Us
       </Link>
-      <Link href="/#thirdFold">
+      <Link href="/#footer">
         Contact Us
       </Link>
             </div>
@@ -174,7 +171,7 @@ height={300}   alt="Fma Logo Logo" />
       <Link href="/#secondFold" onClick={toggleNav}>
         About Us
       </Link>
-      <Link href="/#thirdFold" onClick={toggleNav}>
+      <Link href="/#footer" onClick={toggleNav}>
         Contact Us
       </Link>
         </nav>
@@ -337,6 +334,11 @@ height={300}   alt="Fma Logo Logo" />
           </div>
         </div>
 
+        <div className={styles.howItWorksContainer}>
+        <h2>How It Works</h2>
+        <HowItWorks />
+        </div>
+
 
         <div className={styles.testimonialContainer} id="testimonialContainer">
          <h2>
@@ -353,11 +355,11 @@ height={300}   alt="Fma Logo Logo" />
       ))}</div>
     </div>
 
-        <div className={styles.thirdFold} id="thirdFold">
+        <div className={styles.footer} id="footer">
           
-          <div className={styles.thirdFoldDiv}>
+          <div className={styles.footerDiv}>
           <h2>Get In Touch</h2>
-          <div className={styles.thirdFoldText}>
+          <div className={styles.footerText}>
 
          
  
