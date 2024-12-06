@@ -27,7 +27,7 @@
 }
 
 .logo img{
-  max-width: 50px;
+  max-width: 320px;
   height: auto;
   margin-left: 50px;
 }
@@ -252,7 +252,7 @@ display: block;
   }
 
 .logo img{
-  max-width: 50px;
+  max-width: 200px;
   margin-left: 10px;
 }
 

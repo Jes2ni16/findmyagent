@@ -121,7 +121,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.desktop}>
           <div className={styles.logo}>
-            <Image  src="/fma-logo.png"  width={500} 
+            <Image  src="/fma-logo2.webp"  width={500} 
 height={300}   alt="Fma Logo Logo" />
           </div>
           <nav className="navigation">
@@ -141,7 +141,7 @@ height={300}   alt="Fma Logo Logo" />
 
         <div className={styles.mobile}>
           <div className={styles.logo}>
-          <Image  src="/fma-logo.png"  width={500} 
+          <Image  src="/fma-logo2.webp"  width={500} 
 height={300}   alt="Fma Logo Logo" />
           </div>
           <div className="hamburger" onClick={toggleNav}>
