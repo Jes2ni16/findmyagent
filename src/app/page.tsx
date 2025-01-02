@@ -375,7 +375,7 @@ height={300}   alt="Fma Logo Logo" />
             <div className={styles.iconDiv}> 
             <Image src="/phoneIcon.png" alt="phone-icon" width={70} height={60}  />
               <p>
-                +63 999 6710 543
+                +63 992 153 7487
               </p>
             </div>
 
