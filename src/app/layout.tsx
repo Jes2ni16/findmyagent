@@ -15,6 +15,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Find My Agent ",
+  icons: {
+    icon: '/favicon.png', 
+  },
   description: "Featuring trusted agents who are dedicated to ensuring a smooth transaction, making it easier for you.",
 };
 
