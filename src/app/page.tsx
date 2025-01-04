@@ -35,9 +35,9 @@ interface Image {
 }
 
 const images: Image[] = [
-  { src: "/Malbin.webp", alt: "Malvin Card1", inv: "https://zaiko.website/client/malvin2", name: "Malvin Sabillo"},
+  { src: "/Malvin.webp", alt: "Malvin Card1", inv: "https://zaiko.website/client/malvin2", name: "Malvin Sabillo"},
   { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
-  { src: "/Malbin.webp", alt: "Malvin Card2", inv: "https://zaiko.website/client/malvin2", name: "Malvin Sabillo" },
+  { src: "/Malvin.webp", alt: "Malvin Card2", inv: "https://zaiko.website/client/malvin2", name: "Malvin Sabillo" },
   { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
   { src: "/Dianne.webp", alt: "Diane", inv: "https://lookerstudio.google.com/embed/u/0/reporting/c5c9689a-ae0d-4846-859a-30238d57320f/page/p_ocwri6ymed", name: "Dianne Alvarez" },
   { src: "/Jesua.webp", alt: "Jesua", inv: "https://zaiko.website/client/jesua1", name: "Jesua Garlet" },
