@@ -66,7 +66,7 @@ height={110}   alt="Connect Icon" /></div>
             <p>Check their DigiCard and start the conversation</p></div>
           </div>
           <div className="step">
-            <div className="title"><h3>Seal the Deak</h3>
+            <div className="title"><h3>Seal the Deal</h3>
             <p>Share your plans and let your agent handle the rest.</p></div>
             <div className="number-container">
               <div className="number">4</div>
