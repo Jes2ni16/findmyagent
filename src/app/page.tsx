@@ -233,8 +233,10 @@ height={300}   alt="Fma Logo Logo" />
         <SwiperSlide key={index}>
           <div className="invLink">
           <FaRegHandPointRight className="link-icon" />
-          <Link href={image.inv} target="_blank" rel="noopener noreferrer">
-  Visit my Inventory
+          <Link href={image.inv} passHref>
+  <a target="_blank" rel="noopener noreferrer">
+    Visit my Inventory
+  </a>
 </Link>
           </div>
         
