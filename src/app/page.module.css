@@ -43,7 +43,6 @@ color: #000;
 .firstFold {
   height: 93vh;
   background-color: #fff;
-  background-image: url('/background5.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -74,10 +73,9 @@ color: #000;
 
 .secondFold h2{
   text-align: center;
-  background-color: #252525;
-    padding: 25px 0;
-    color: #fff;
-    font-weight: 300;
+    padding: 28px 0;
+    color: #116141;
+    font-weight: 600;
 }
 
 /* .secondFold hr {
@@ -88,11 +86,10 @@ color: #000;
 
 .firstFold  h1{
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 30px;
-color: #fff;
+color: #116141;
 padding-top: 100px;
-font-family: 'Playfair Display', serif;
 }
 
 .serviceText p{

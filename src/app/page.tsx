@@ -42,6 +42,10 @@ const images: Image[] = [
   { src: "/Jesua.webp", alt: "Jesua", inv: "https://zaiko.website/client/jesua1", name: "Jesua Garlet" },
   { src: "/Jesua.webp", alt: "Jesua", inv: "https://zaiko.website/client/jesua1", name: "Jesua Garlet" },
   { src: "/Jestoni.webp", alt: "Jestoni", inv: "https://zaiko.website/client/jestoni1", name: "Jestoni Brion" },
+  { src: "/Lindz.webp", alt: "Lindy Montero", inv: "https://zaiko.website/client/lindy1", name: "Lindy Montero" },
+  { src: "/Lindz.webp", alt: "Lindy Montero", inv: "https://zaiko.website/client/lindy1", name: "Lindy Montero" },
+  { src: "/Lindz.webp", alt: "Ferdelin Fernandez", inv: "https://zaiko.website/client/ferdelin1", name: "Ferdelin Fernandez" },
+  { src: "/Lindz.webp", alt: "Ferdelin Fernandez", inv: "https://zaiko.website/client/ferdelin1", name: "Ferdelin Fernandez" },
   { src: "/Jestoni.webp", alt: "Jestoni", inv: "https://zaiko.website/client/jestoni1", name: "Jestoni Brion" },
 ];
 
@@ -54,8 +58,6 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement | null>(null);
-
-  const [thumbsSwiper, setThumbsSwiper] = useState< SwiperType | null>(null);
 
   function shuffleArray(array: Image[]): Image[] {
     return array
@@ -233,10 +235,8 @@ height={300}   alt="Fma Logo Logo" />
         <SwiperSlide key={index}>
           <div className="invLink">
           <FaRegHandPointRight className="link-icon" />
-          <Link href={image.inv} passHref>
-  <a target="_blank" rel="noopener noreferrer">
-    Visit my Inventory
-  </a>
+          <Link href={image.inv} target="_blank" rel="noopener noreferrer">
+  Visit my Inventory
 </Link>
           </div>
         
@@ -248,14 +248,12 @@ height={300}   alt="Fma Logo Logo" />
         variant="body1"
         textAlign="center"
         color="textSecondary"
-        sx={{ marginTop: 3, color:'#fff' }}
+        sx={{ marginTop: 3, color:'#116141' }}
       >
         All agents are verified <VerifiedIcon sx={{ color: '#2f45ff', fontSize: 16, marginLeft: 1 }} />
       </Typography>
 
           </div>
-
-
 
           <Modal
         open={Boolean(selectedImage)}
@@ -301,7 +299,7 @@ height={300}   alt="Fma Logo Logo" />
 
       
       <div className={styles.arrowDown}>
-      <KeyboardArrowDownIcon style={{ fontSize: 80, color:'#fff' }} />
+      <KeyboardArrowDownIcon style={{ fontSize: 80, color:'#116141' }} />
     </div>
 
 
