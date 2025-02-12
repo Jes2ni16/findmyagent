@@ -40,11 +40,9 @@ const images: Image[] = [
   { src: "/Jesua.webp", alt: "Jesua", inv: "https://zaiko.website/client/jesua1", name: "Jesua Garlet" },
   { src: "/Jestoni.webp", alt: "Jestoni", inv: "https://zaiko.website/client/jestoni1", name: "Jestoni Brion" },
   { src: "/Lindz.webp", alt: "Lindy Montero", inv: "https://zaiko.website/client/lindy1", name: "Lindy Montero" },
-  { src: "/Lindz.webp", alt: "Lindy Montero", inv: "https://zaiko.website/client/lindy1", name: "Lindy Montero" },
-  { src: "/Ferdz.webp", alt: "Ferdelin Fernandez", inv: "https://zaiko.website/client/ferdelin1", name: "Ferdelin Fernandez" },
   { src: "/Ferdz.webp", alt: "Ferdelin Fernandez", inv: "https://zaiko.website/client/ferdelin1", name: "Ferdelin Fernandez" },
   { src: "/Essil.webp", alt: "Essil Image", inv: "https://zaiko.website/client/essil1", name: "Essil Lovely Son" },
-  { src: "/Essil.webp", alt: "Essil Image", inv: "https://zaiko.website/client/essil1", name: "Essil Lovely Son" },
+  { src: "/Nino.webp", alt: "Nino Image", inv: "https://zaiko.website/client/nino1", name: "Nino" },
 ];
 
 
