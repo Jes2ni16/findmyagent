@@ -38,11 +38,14 @@ const images: Image[] = [
   { src: "/Malvin.webp", alt: "Malvin Card1", inv: "https://zaiko.website/client/malvin2", name: "Malvin Sabillo"},
   { src: "/Dianne.webp", alt: "Diane", inv: "https://zaiko.website/client/dianne1", name: "Dianne Alvarez" },
   { src: "/Jesua.webp", alt: "Jesua", inv: "https://zaiko.website/client/jesua1", name: "Jesua Garlet" },
-  { src: "/Jestoni.webp", alt: "Jestoni", inv: "https://zaiko.website/client/jestoni1", name: "Jestoni Brion" },
+  { src: "/Jestoni.webp", alt: "Jestoni Brion", inv: "https://zaiko.website/client/jestoni1", name: "Jestoni Brion" },
   { src: "/Lindz.webp", alt: "Lindy Montero", inv: "https://zaiko.website/client/lindy1", name: "Lindy Montero" },
   { src: "/Ferdz.webp", alt: "Ferdelin Fernandez", inv: "https://zaiko.website/client/ferdelin1", name: "Ferdelin Fernandez" },
-  { src: "/Essil.webp", alt: "Essil Image", inv: "https://zaiko.website/client/essil1", name: "Essil Lovely Son" },
+  { src: "/Essil.webp", alt: "Essil Lovely Son", inv: "https://zaiko.website/client/essil1", name: "Essil Lovely Son" },
   { src: "/Nino.webp", alt: "Nino Image", inv: "https://zaiko.website/client/nino1", name: "Nino" },
+  { src: "/agent-profile/Eugene.webp", alt: "Eugene Image", inv: "https://zaiko.website/client/eugene1", name: "Eugene Bal anon" },
+  { src: "/agent-profile/Jude.webp", alt: "Jude Embrado", inv: "https://zaiko.website/client/teody1", name: "Jude Embrado" },
+  { src: "/agent-profile/Juvelyn.webp", alt: "Juvelyn Bargayo", inv: "https://zaiko.website/client/juvelyn1", name: "Juvelyn Bargayo" },
 ];
 
 
