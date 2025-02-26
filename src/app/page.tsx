@@ -46,6 +46,7 @@ const images: Image[] = [
   { src: "/agent-profile/Eugene.webp", alt: "Eugene Image", inv: "https://zaiko.website/client/eugene1", name: "Eugene Bal anon" },
   { src: "/agent-profile/Jude.webp", alt: "Jude Embrado", inv: "https://zaiko.website/client/teody1", name: "Jude Embrado" },
   { src: "/agent-profile/Juvelyn.webp", alt: "Juvelyn Bargayo", inv: "https://zaiko.website/client/juvelyn1", name: "Juvelyn Bargayo" },
+  { src: "/agent-profile/Simone.webp", alt: "Simone Ruiz", inv: "https://zaiko.website/client/simone1", name: "Juvelyn Bargayo" },
 ];
 
 
