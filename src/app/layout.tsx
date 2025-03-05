@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Find My Agent",
     description: "Featuring trusted agents who are dedicated to ensuring a smooth transaction, making it easier for you.",
-    images: ['https://findmyagent.net/fma-logo2.webp'],
+    images: ['https://findmyagent.net/og-fma.png'],
     url: "https://findmyagent.net", // Replace with your website URL
     type: "website",
  // Replace with your image URL
