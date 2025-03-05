@@ -16,6 +16,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Find My Agent ",
   description: "Featuring trusted agents who are dedicated to ensuring a smooth transaction, making it easier for you.",
+  openGraph: {
+    title: "Find My Agent",
+    description: "Featuring trusted agents who are dedicated to ensuring a smooth transaction, making it easier for you.",
+    url: "https://your-website-url.com", // Replace with your website URL
+    type: "website",
+    images: ['https://findmyagent.net/og-image.webp'], // Replace with your image URL
+  },
 };
 
 export default function RootLayout({
