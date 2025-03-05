@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "Featuring trusted agents who are dedicated to ensuring a smooth transaction, making it easier for you.",
     url: "https://your-website-url.com", // Replace with your website URL
     type: "website",
-    images: ['https://findmyagent.net/og-image.webp'], // Replace with your image URL
+    images: ['https://findmyagent.net/fma-logo2.webp'], // Replace with your image URL
   },
 };
 
